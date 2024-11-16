@@ -245,6 +245,29 @@
     .detalles-resumen {
         padding: 1rem;
     }
+
+    .grid-contacto {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .columna-formulario,
+    .tarjeta-contacto {
+        margin-top: 2rem;
+    }
+
+    /* Ajuste para el título del hero con imagen */
+    .hero-contacto,
+    .hero-carrito,
+    .hero-pago {
+        background-image: url('../img/hero-mobile.jpg');
+        padding: 100px 0 50px;
+    }
+
+    .titulo-hero {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
 }
 
 /* Móviles */

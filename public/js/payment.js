@@ -199,19 +199,20 @@ async function handlePaymentForm(event) {
             return;
         }
 
-        const formData = {
+        const datosFactura = {
+            numeroFactura: generarNumeroFactura(),
             nombre: document.getElementById('nombre').value,
             email: document.getElementById('email').value,
             direccion: document.getElementById('direccion').value,
-            ciudad: document.getElementById('ciudad').value,
-            codigoPostal: document.getElementById('codigo-postal').value,
             productos: carrito.map(item => ({
                 titulo: item.titulo,
                 cantidad: item.cantidad,
                 precio: item.precio
             })),
-            subtotal: carrito.reduce((total, item) => total + (item.precio * item.cantidad), 0),
-            metodoPago: document.querySelector('input[name="metodo-pago"]:checked').value
+            subtotal: calcularSubtotal(carrito),
+            iva: calcularIVA(carrito),
+            total: calcularTotal(carrito),
+            metodoPago: obtenerMetodoPago()
         };
 
         const response = await fetch('/api/factura', {
@@ -219,7 +220,7 @@ async function handlePaymentForm(event) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(datosFactura)
         });
 
         const data = await response.json();
