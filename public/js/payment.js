@@ -240,4 +240,32 @@ async function handlePaymentForm(event) {
     } finally {
         submitButton.disabled = false;
     }
+}
+
+// Función para generar número de factura
+function generarNumeroFactura() {
+    const fecha = new Date();
+    const año = fecha.getFullYear();
+    const mes = (fecha.getMonth() + 1).toString().padStart(2, '0');
+    const aleatorio = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+    return `FAC-${año}${mes}-${aleatorio}`;
+}
+
+// Función para calcular el IVA
+function calcularIVA(carrito) {
+    const subtotal = calcularSubtotal(carrito);
+    return subtotal * 0.21;
+}
+
+// Función para calcular el total
+function calcularTotal(carrito) {
+    const subtotal = calcularSubtotal(carrito);
+    const iva = calcularIVA(carrito);
+    return subtotal + iva;
+}
+
+// Función para obtener el método de pago
+function obtenerMetodoPago() {
+    const metodoPago = document.querySelector('input[name="metodo-pago"]:checked');
+    return metodoPago ? metodoPago.value : 'No especificado';
 } 
