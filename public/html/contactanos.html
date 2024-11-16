@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - ModaStyle</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navegacion contenedor">
+            <a href="../html/index.html" class="logo">ModaStyle</a>
+            
+            <div class="barra-nav">
+                <a href="../html/productos.html" class="enlace-nav">Productos</a>
+                <a href="../html/nosotros.html" class="enlace-nav">Nosotros</a>
+                <a href="../html/contactanos.html" class="enlace-nav">Contáctanos</a>
+                <a href="../html/portafolio.html" class="enlace-nav">Portafolio</a>
+            </div>
+
+            <a href="../html/carrito.html" class="icono-carrito">
+                <i class='bx bx-cart' id="icono-carrito"></i>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-contacto">
+            <div class="contenedor">
+                <h1 class="titulo-hero">¿Tienes alguna pregunta?</h1>
+                <p class="subtitulo-hero">Estamos aquí para ayudarte</p>
+            </div>
+        </section>
+
+        <section class="seccion contacto contenedor">
+            <div class="grid-contacto">
+                <div class="columna-formulario">
+                    <h2 class="titulo-seccion">Envíanos un mensaje</h2>
+                    <p class="descripcion-contacto">Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                    
+                    <form id="formulario-contacto" class="formulario-contacto">
+                        <div class="campo">
+                            <label for="nombre">
+                                <i class='bx bx-user'></i> Nombre Completo
+                            </label>
+                            <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="email">
+                                <i class='bx bx-envelope'></i> Correo Electrónico
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="asunto">
+                                <i class='bx bx-help-circle'></i> Asunto
+                            </label>
+                            <input type="text" id="asunto" name="asunto" placeholder="¿Sobre qué quieres hablar?" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="mensaje">
+                                <i class='bx bx-message-detail'></i> Mensaje
+                            </label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos más detalles..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="boton-enviar">
+                            <i class='bx bx-send'></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <div class="columna-info">
+                    <div class="tarjeta-contacto">
+                        <h3>Información de Contacto</h3>
+                        <p class="descripcion-info">Diferentes formas de contactarnos:</p>
+                        
+                        <div class="lista-contacto">
+                            <div class="item-contacto">
+                                <i class='bx bxs-map'></i>
+                                <div class="detalle-contacto">
+                                    <h4>Ubicación</h4>
+                                    <p>Calle Principal 123, Ciudad</p>
+                                    <p>Código Postal 12345</p>
+                                </div>
+                            </div>
+
+                            <div class="item-contacto">
+                                <i class='bx bxs-phone-call'></i>
+                                <div class="detalle-contacto">
+                                    <h4>Teléfono</h4>
+                                    <p>+34 900 123 456</p>
+                                    <p>Lun - Vie: 9:00 - 18:00</p>
+                                </div>
+                            </div>
+
+                            <div class="item-contacto">
+                                <i class='bx bxs-envelope'></i>
+                                <div class="detalle-contacto">
+                                    <h4>Email</h4>
+                                    <p>info@modastyle.com</p>
+                                    <p>soporte@modastyle.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="redes-sociales-contacto">
+                            <h4>Síguenos en redes</h4>
+                            <div class="iconos-redes">
+                                <a href="#" class="red-social"><i class='bx bxl-facebook'></i></a>
+                                <a href="#" class="red-social"><i class='bx bxl-instagram'></i></a>
+                                <a href="#" class="red-social"><i class='bx bxl-twitter'></i></a>
+                                <a href="#" class="red-social"><i class='bx bxl-linkedin'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mapa-contacto">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-3.123456!3d40.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDA3JzM0LjQiTiAzwrAwNycyNC41Ilc!5e0!3m2!1ses!2ses!4v1234567890"
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion faq contenedor">
+            <h2 class="titulo-seccion">Preguntas Frecuentes</h2>
+            <div class="grid-faq">
+                <div class="pregunta">
+                    <h3><i class='bx bx-help-circle'></i> ¿Cuál es el tiempo de entrega?</h3>
+                    <p>Nuestro tiempo de entrega estándar es de 3-5 días hábiles dentro de la península.</p>
+                </div>
+                <div class="pregunta">
+                    <h3><i class='bx bx-help-circle'></i> ¿Tienen devoluciones gratuitas?</h3>
+                    <p>Sí, ofrecemos devoluciones gratuitas dentro de los primeros 30 días tras la compra.</p>
+                </div>
+                <div class="pregunta">
+                    <h3><i class='bx bx-help-circle'></i> ¿Hacen envíos internacionales?</h3>
+                    <p>Sí, realizamos envíos a toda Europa y América.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="contenido-pie">
+                <div class="columna-pie">
+                    <h3>ModaStyle</h3>
+                    <p>Tu destino de moda favorito</p>
+                </div>
+                <div class="columna-pie">
+                    <h4>Enlaces Rápidos</h4>
+                    <a href="../html/productos.html">Productos</a>
+                    <a href="../html/index.html#nosotros">Sobre Nosotros</a>
+                    <a href="../html/contactanos.html">Contáctanos</a>
+                </div>
+                <div class="columna-pie">
+                    <h4>Síguenos</h4>
+                    <div class="redes-sociales">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="derechos">
+                <p>&copy; 2024 ModaStyle. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <nav class="menu-movil">
+        <div class="menu-items">
+            <a href="../html/productos.html" class="menu-item">
+                <i class='bx bx-store'></i>
+                <span>Productos</span>
+            </a>
+            <a href="../html/nosotros.html" class="menu-item">
+                <i class='bx bx-group'></i>
+                <span>Nosotros</span>
+            </a>
+            <a href="../html/contactanos.html" class="menu-item">
+                <i class='bx bx-envelope'></i>
+                <span>Contacto</span>
+            </a>
+            <a href="../html/portafolio.html" class="menu-item">
+                <i class='bx bx-briefcase'></i>
+                <span>Portafolio</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html> 

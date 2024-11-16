@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModaStyle - Tu Tienda de Ropa</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navegacion contenedor">
+            <a href="index.html" class="logo">ModaStyle</a>
+            
+            <div class="barra-nav">
+                <a href="productos.html" class="enlace-nav">Productos</a>
+                <a href="nosotros.html" class="enlace-nav">Nosotros</a>
+                <a href="contactanos.html" class="enlace-nav">Contáctanos</a>
+                <a href="portafolio.html" class="enlace-nav">Portafolio</a>
+            </div>
+
+            <a href="carrito.html" class="icono-carrito">
+                <i class='bx bx-cart' id="icono-carrito"></i>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <video autoplay muted loop id="hero-video">
+                <source src="/videos/hero-video.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div class="contenedor">
+                <div class="hero-contenido">
+                    <h1>Descubre Tu Estilo</h1>
+                    <p class="hero-descripcion">Encuentra las últimas tendencias en moda y accesorios</p>
+                    <div class="hero-botones">
+                        <a href="productos.html" class="boton-principal">Ver Colección</a>
+                        <a href="nosotros.html" class="boton-secundario">Conócenos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion categorias">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Nuestras Categorías</h2>
+                <div class="grid-categorias">
+                    <div class="categoria">
+                        <img src="../img/categoria-mujer.png" alt="Moda Mujer">
+                        <div class="categoria-info">
+                            <h3>Moda Mujer</h3>
+                            <a href="productos.html" class="boton-categoria">
+                                Explorar <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="categoria">
+                        <img src="../img/categoria-hombre.png" alt="Moda Hombre">
+                        <div class="categoria-info">
+                            <h3>Moda Hombre</h3>
+                            <a href="productos.html" class="boton-categoria">
+                                Explorar <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="categoria">
+                        <img src="../img/categoria-accesorios.png" alt="Accesorios">
+                        <div class="categoria-info">
+                            <h3>Accesorios</h3>
+                            <a href="productos.html" class="boton-categoria">
+                                Explorar <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion newsletter">
+            <div class="contenedor">
+                <div class="newsletter-contenido">
+                    <h2>¡No Te Pierdas Nuestras Ofertas!</h2>
+                    <p>Suscríbete a nuestro newsletter y recibe un 10% de descuento en tu primera compra</p>
+                    <form class="formulario-newsletter">
+                        <input type="email" placeholder="Tu correo electrónico">
+                        <button type="submit" class="boton-principal">
+                            Suscribirse <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="contenido-pie">
+                <div class="columna-pie">
+                    <h3>ModaStyle</h3>
+                    <p>Tu destino de moda favorito</p>
+                </div>
+                <div class="columna-pie">
+                    <h4>Enlaces Rápidos</h4>
+                    <a href="productos.html">Productos</a>
+                    <a href="nosotros.html">Sobre Nosotros</a>
+                    <a href="contactanos.html">Contacto</a>
+                </div>
+                <div class="columna-pie">
+                    <h4>Síguenos</h4>
+                    <div class="redes-sociales">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="derechos">
+                <p>&copy; 2024 ModaStyle. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <nav class="menu-movil">
+        <div class="menu-items">
+            <a href="productos.html" class="menu-item">
+                <i class='bx bx-store'></i>
+                <span>Productos</span>
+            </a>
+            <a href="nosotros.html" class="menu-item">
+                <i class='bx bx-group'></i>
+                <span>Nosotros</span>
+            </a>
+            <a href="contactanos.html" class="menu-item">
+                <i class='bx bx-envelope'></i>
+                <span>Contacto</span>
+            </a>
+            <a href="portafolio.html" class="menu-item">
+                <i class='bx bx-briefcase'></i>
+                <span>Portafolio</span>
+            </a>
+        </div>
+    </nav>
+</body>
+</html>

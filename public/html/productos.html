@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - ModaStyle</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navegacion contenedor">
+            <a href="index.html" class="logo">ModaStyle</a>
+            
+            <div class="barra-nav">
+                <a href="productos.html" class="enlace-nav">Productos</a>
+                <a href="nosotros.html" class="enlace-nav">Nosotros</a>
+                <a href="contactanos.html" class="enlace-nav">Contáctanos</a>
+                <a href="portafolio.html" class="enlace-nav">Portafolio</a>
+            </div>
+
+            <a href="carrito.html" class="icono-carrito">
+                <i class='bx bx-cart' id="icono-carrito"></i>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-productos">
+            <div class="contenedor">
+                <h1>Nuestra Colección</h1>
+                <p>Descubre las últimas tendencias en moda</p>
+            </div>
+        </section>
+
+        <section class="seccion productos contenedor">
+            <div class="titulo-productos">
+                <h2>Nuestra Colección</h2>
+                <p>Descubre las últimas tendencias en moda</p>
+            </div>
+
+            <div class="barra-filtros">
+                <div class="buscador">
+                    <i class='bx bx-search'></i>
+                    <input type="text" id="buscar-producto" placeholder="Buscar productos...">
+                </div>
+                
+                <div class="grupo-filtro">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" class="filtro-select">
+                        <option value="todos">Todos</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="accesorios">Accesorios</option>
+                    </select>
+                </div>
+                
+                <div class="grupo-filtro">
+                    <label for="ordenar">Ordenar por:</label>
+                    <select id="ordenar" class="filtro-select">
+                        <option value="relevancia">Relevancia</option>
+                        <option value="precio-bajo">Precio: Menor a Mayor</option>
+                        <option value="precio-alto">Precio: Mayor a Menor</option>
+                        <option value="nuevos">Más Nuevos</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="lista-productos" class="contenedor-productos">
+                <!-- Los productos se cargan dinámicamente aquí -->
+            </div>
+        </section>
+
+        <section class="seccion newsletter-productos">
+            <div class="contenedor">
+                <div class="newsletter-contenido">
+                    <h2>¡No te pierdas nuestras ofertas!</h2>
+                    <p>Suscríbete para recibir las últimas novedades y descuentos exclusivos</p>
+                    <form class="formulario-newsletter">
+                        <input type="email" placeholder="Tu correo electrónico">
+                        <button type="submit" class="boton-principal">
+                            Suscribirse <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="contenido-pie">
+                <div class="columna-pie">
+                    <h3>ModaStyle</h3>
+                    <p>Tu destino de moda favorito</p>
+                </div>
+                <div class="columna-pie">
+                    <h4>Enlaces Rápidos</h4>
+                    <a href="productos.html">Productos</a>
+                    <a href="index.html#nosotros">Sobre Nosotros</a>
+                    <a href="index.html#contacto">Contacto</a>
+                </div>
+                <div class="columna-pie">
+                    <h4>Síguenos</h4>
+                    <div class="redes-sociales">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="derechos">
+                <p>&copy; 2024 ModaStyle. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <nav class="menu-movil">
+        <div class="menu-items">
+            <a href="productos.html" class="menu-item">
+                <i class='bx bx-store'></i>
+                <span>Productos</span>
+            </a>
+            <a href="nosotros.html" class="menu-item">
+                <i class='bx bx-group'></i>
+                <span>Nosotros</span>
+            </a>
+            <a href="contactanos.html" class="menu-item">
+                <i class='bx bx-envelope'></i>
+                <span>Contacto</span>
+            </a>
+            <a href="portafolio.html" class="menu-item">
+                <i class='bx bx-briefcase'></i>
+                <span>Portafolio</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

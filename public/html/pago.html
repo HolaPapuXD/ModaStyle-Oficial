@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Pago - ModaStyle</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navegacion contenedor">
+            <a href="index.html" class="logo">ModaStyle</a>
+            
+            <div class="barra-nav">
+                <a href="productos.html" class="enlace-nav">Productos</a>
+                <a href="nosotros.html" class="enlace-nav">Nosotros</a>
+                <a href="contactanos.html" class="enlace-nav">Contáctanos</a>
+                <a href="portafolio.html" class="enlace-nav">Portafolio</a>
+            </div>
+
+            <a href="carrito.html" class="icono-carrito">
+                <i class='bx bx-cart' id="icono-carrito"></i>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-pago">
+            <div class="contenedor">
+                <h1>Finalizar Compra</h1>
+                <p>Complete los detalles de pago para procesar su pedido</p>
+            </div>
+        </section>
+
+        <section class="seccion pago contenedor">
+            <div class="grid-pago">
+                <div class="detalles-pago">
+                    <div class="pasos-pago">
+                        <div class="paso activo" data-paso="1">
+                            <i class='bx bx-user'></i>
+                            <span class="titulo-paso">Datos Personales</span>
+                        </div>
+                        <div class="paso" data-paso="2">
+                            <i class='bx bx-map'></i>
+                            <span class="titulo-paso">Dirección</span>
+                        </div>
+                        <div class="paso" data-paso="3">
+                            <i class='bx bx-credit-card'></i>
+                            <span class="titulo-paso">Pago</span>
+                        </div>
+                    </div>
+
+                    <form id="formulario-pago" class="formulario-pago">
+                        <div class="seccion-formulario activo" data-seccion="1">
+                            <h3>Datos Personales</h3>
+                            <div class="campo">
+                                <label for="nombre">
+                                    <i class='bx bx-user'></i> Nombre Completo
+                                </label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="campo">
+                                <label for="email">
+                                    <i class='bx bx-envelope'></i> Email
+                                </label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="botones-navegacion">
+                                <button type="button" class="boton-secundario anterior" style="visibility: hidden;">
+                                    <i class='bx bx-left-arrow-alt'></i> Anterior
+                                </button>
+                                <button type="button" class="boton-principal siguiente">
+                                    Siguiente <i class='bx bx-right-arrow-alt'></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="seccion-formulario" data-seccion="2">
+                            <h3>Dirección de Envío</h3>
+                            <div class="campo">
+                                <label for="direccion">
+                                    <i class='bx bx-map'></i> Dirección
+                                </label>
+                                <input type="text" id="direccion" name="direccion" required>
+                            </div>
+                            <div class="campo">
+                                <label for="ciudad">
+                                    <i class='bx bx-building'></i> Ciudad
+                                </label>
+                                <input type="text" id="ciudad" name="ciudad" required>
+                            </div>
+                            <div class="campo">
+                                <label for="codigo-postal">
+                                    <i class='bx bx-map-pin'></i> Código Postal
+                                </label>
+                                <input type="text" id="codigo-postal" name="codigo-postal" required>
+                            </div>
+                            <div class="botones-navegacion">
+                                <button type="button" class="boton-secundario anterior">
+                                    <i class='bx bx-left-arrow-alt'></i> Anterior
+                                </button>
+                                <button type="button" class="boton-principal siguiente">
+                                    Siguiente <i class='bx bx-right-arrow-alt'></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="seccion-formulario" data-seccion="3">
+                            <h3>Método de Pago</h3>
+                            <div class="metodos-pago">
+                                <div class="metodo-pago">
+                                    <input type="radio" id="tarjeta" name="metodo-pago" value="tarjeta" required>
+                                    <label for="tarjeta">
+                                        <div class="icono-metodo">
+                                            <i class='bx bx-credit-card'></i>
+                                        </div>
+                                        <div class="info-metodo">
+                                            <span class="titulo-metodo">Tarjeta de Crédito/Débito</span>
+                                            <span class="subtitulo-metodo">Pago seguro con tarjeta</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="metodo-pago">
+                                    <input type="radio" id="paypal" name="metodo-pago" value="paypal">
+                                    <label for="paypal">
+                                        <div class="icono-metodo">
+                                            <i class='bx bxl-paypal'></i>
+                                        </div>
+                                        <div class="info-metodo">
+                                            <span class="titulo-metodo">PayPal</span>
+                                            <span class="subtitulo-metodo">Pago rápido y seguro</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="botones-navegacion">
+                                <button type="button" class="boton-secundario anterior">
+                                    <i class='bx bx-left-arrow-alt'></i> Anterior
+                                </button>
+                                <button type="submit" class="boton-principal">
+                                    Finalizar Compra <i class='bx bx-check'></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="resumen-pedido">
+                    <h3>Resumen del Pedido</h3>
+                    <div class="detalles-resumen">
+                        <div class="items-resumen">
+                            <!-- Los items se cargan dinámicamente -->
+                        </div>
+                        <div class="fila-resumen">
+                            <span>Subtotal</span>
+                            <span id="subtotal-pedido">0.00€</span>
+                        </div>
+                        <div class="fila-resumen">
+                            <span>IVA (21%)</span>
+                            <span id="iva-pedido">0.00€</span>
+                        </div>
+                        <div class="fila-resumen">
+                            <span>Envío</span>
+                            <span>Gratis</span>
+                        </div>
+                        <div class="fila-resumen total">
+                            <span>Total a Pagar</span>
+                            <span id="total-pedido">0.00€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="contenido-pie">
+                <div class="columna-pie">
+                    <h3>ModaStyle</h3>
+                    <p>Tu destino de moda favorito</p>
+                </div>
+                <div class="columna-pie">
+                    <h4>Enlaces Rápidos</h4>
+                    <a href="productos.html">Productos</a>
+                    <a href="nosotros.html">Sobre Nosotros</a>
+                    <a href="contactanos.html">Contacto</a>
+                </div>
+                <div class="columna-pie">
+                    <h4>Síguenos</h4>
+                    <div class="redes-sociales">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="derechos">
+                <p>&copy; 2024 ModaStyle. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <nav class="menu-movil">
+        <div class="menu-items">
+            <a href="productos.html" class="menu-item">
+                <i class='bx bx-store'></i>
+                <span>Productos</span>
+            </a>
+            <a href="nosotros.html" class="menu-item">
+                <i class='bx bx-group'></i>
+                <span>Nosotros</span>
+            </a>
+            <a href="contactanos.html" class="menu-item">
+                <i class='bx bx-envelope'></i>
+                <span>Contacto</span>
+            </a>
+            <a href="portafolio.html" class="menu-item">
+                <i class='bx bx-briefcase'></i>
+                <span>Portafolio</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/payment.js"></script>
+</body>
+</html> 

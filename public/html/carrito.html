@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - ModaStyle</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navegacion contenedor">
+            <a href="index.html" class="logo">ModaStyle</a>
+            
+            <div class="barra-nav">
+                <a href="productos.html" class="enlace-nav">Productos</a>
+                <a href="nosotros.html" class="enlace-nav">Nosotros</a>
+                <a href="contactanos.html" class="enlace-nav">Contáctanos</a>
+                <a href="portafolio.html" class="enlace-nav">Portafolio</a>
+            </div>
+
+            <a href="carrito.html" class="icono-carrito">
+                <i class='bx bx-cart' id="icono-carrito"></i>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-carrito">
+            <div class="contenedor">
+                <h1>Tu Carrito de Compras</h1>
+                <p>Revisa y gestiona tus productos seleccionados</p>
+            </div>
+        </section>
+
+        <section class="seccion carrito contenedor">
+            <div class="grid-carrito">
+                <div class="productos-carrito">
+                    <div class="encabezado-carrito">
+                        <h2>Productos</h2>
+                        <a href="productos.html" class="volver-comprar">
+                            <i class='bx bx-left-arrow-alt'></i> Seguir Comprando
+                        </a>
+                    </div>
+                    
+                    <div id="items-carrito" class="lista-items">
+                        <!-- Se llena dinámicamente con JavaScript -->
+                    </div>
+                </div>
+
+                <div class="resumen-carrito">
+                    <div class="caja-resumen">
+                        <h2>Resumen del Pedido</h2>
+                        <div class="detalles-resumen">
+                            <div class="fila-resumen">
+                                <span>Subtotal</span>
+                                <span id="subtotal">0.00€</span>
+                            </div>
+                            <div class="fila-resumen">
+                                <span>IVA (21%)</span>
+                                <span id="iva">0.00€</span>
+                            </div>
+                            <div class="fila-resumen">
+                                <span>Envío</span>
+                                <span>Gratis</span>
+                            </div>
+                            <div class="fila-resumen total">
+                                <span>Total</span>
+                                <span id="total-carrito">0.00€</span>
+                            </div>
+                        </div>
+                        <a href="pago.html" class="boton-checkout">
+                            Proceder al Pago <i class='bx bx-right-arrow-alt'></i>
+                        </a>
+                    </div>
+
+                    <div class="metodos-pago">
+                        <h3>Métodos de Pago Aceptados</h3>
+                        <div class="iconos-pago">
+                            <i class='bx bxl-visa'></i>
+                            <i class='bx bxl-mastercard'></i>
+                            <i class='bx bxl-paypal'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion productos-sugeridos contenedor">
+            <h2 class="titulo-seccion">También te puede interesar</h2>
+            <div id="sugerencias" class="grid-sugerencias">
+                <!-- Se llena dinámicamente con JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="contenido-pie">
+                <div class="columna-pie">
+                    <h3>ModaStyle</h3>
+                    <p>Tu destino de moda favorito</p>
+                </div>
+                <div class="columna-pie">
+                    <h4>Enlaces Rápidos</h4>
+                    <a href="productos.html">Productos</a>
+                    <a href="nosotros.html">Sobre Nosotros</a>
+                    <a href="contactanos.html">Contacto</a>
+                </div>
+                <div class="columna-pie">
+                    <h4>Síguenos</h4>
+                    <div class="redes-sociales">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="derechos">
+                <p>&copy; 2024 ModaStyle. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <nav class="menu-movil">
+        <div class="menu-items">
+            <a href="productos.html" class="menu-item">
+                <i class='bx bx-store'></i>
+                <span>Productos</span>
+            </a>
+            <a href="nosotros.html" class="menu-item">
+                <i class='bx bx-group'></i>
+                <span>Nosotros</span>
+            </a>
+            <a href="contactanos.html" class="menu-item">
+                <i class='bx bx-envelope'></i>
+                <span>Contacto</span>
+            </a>
+            <a href="portafolio.html" class="menu-item">
+                <i class='bx bx-briefcase'></i>
+                <span>Portafolio</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
