@@ -97,38 +97,35 @@ app.post('/api/factura', async (req, res) => {
         const iva = subtotal * 0.21;
         const total = subtotal + iva;
 
+        // Datos adicionales para la factura
+        const datosFactura = {
+            nombre,
+            email,
+            direccion,
+            productos,
+            subtotal,
+            iva,
+            total,
+            metodoPago,
+            numeroFactura: `FAC-${Date.now()}`, // Genera un número único
+            fecha: new Date().toLocaleDateString('es-ES'),
+            estado: 'Pagado'
+        };
+
         // Enviar correo al cliente
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
             to: email,
             subject: 'Factura de tu compra - ModaStyle',
-            html: facturaTemplate({
-                nombre,
-                email,
-                direccion,
-                productos,
-                subtotal,
-                iva,
-                total,
-                metodoPago
-            })
+            html: facturaTemplate(datosFactura)
         });
 
-        // Enviar correo al administrador
+        // Enviar la misma factura al administrador
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER, // correo del admin
+            to: process.env.EMAIL_USER,
             subject: 'Nueva venta realizada - ModaStyle',
-            html: adminTemplate({
-                nombre,
-                email,
-                direccion,
-                productos,
-                subtotal,
-                iva,
-                total,
-                metodoPago
-            })
+            html: facturaTemplate(datosFactura) // Cambiado de adminTemplate a facturaTemplate
         });
 
         res.json({ success: true, message: 'Factura enviada correctamente' });
