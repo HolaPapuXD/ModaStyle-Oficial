@@ -88,74 +88,71 @@ const adminTemplate = ({ nombre, email, mensaje }) => `
     </div>
 `;
 
-const facturaTemplate = (datos) => `
-    <div style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px;">
-        <div style="background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%); padding: 40px; border-radius: 10px 10px 0 0; text-align: center;">
-            <img src="https://i.imgur.com/YourLogo.png" alt="ModaStyle Logo" style="max-width: 200px;">
-            <h1 style="color: white; margin: 20px 0 0;">Factura de Compra</h1>
+const facturaTemplate = (datos) => {
+    return `
+    <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px;">
+        <div style="background: #34495e; padding: 20px; border-radius: 10px 10px 0 0; text-align: center;">
+            <h1 style="color: #fff; margin: 0;">ModaStyle</h1>
+            <p style="color: #fff; margin: 5px 0 0;">Factura de Compra</p>
         </div>
-
-        <div style="background-color: white; padding: 40px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 40px;">
-                <div>
-                    <h3 style="color: #34495e; margin: 0 0 10px;">Facturado a:</h3>
-                    <p style="color: #666; margin: 0;">${datos.nombre}</p>
-                    <p style="color: #666; margin: 5px 0;">${datos.email}</p>
-                    <p style="color: #666; margin: 5px 0;">${datos.direccion}</p>
-                </div>
-                <div style="text-align: right;">
-                    <p style="color: #666; margin: 0;"><strong>Factura #:</strong> ${datos.numeroFactura}</p>
-                    <p style="color: #666; margin: 5px 0;"><strong>Fecha:</strong> ${datos.fecha}</p>
-                </div>
+        
+        <div style="background: #fff; padding: 20px; border-radius: 0 0 10px 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <div style="border-bottom: 2px solid #34495e; padding-bottom: 10px; margin-bottom: 20px;">
+                <p style="margin: 5px 0;"><strong>Factura Nº:</strong> ${datos.numeroFactura}</p>
+                <p style="margin: 5px 0;"><strong>Fecha:</strong> ${datos.fecha}</p>
+                <p style="margin: 5px 0;"><strong>Estado:</strong> ${datos.estado}</p>
             </div>
 
-            <table style="width: 100%; border-collapse: collapse; margin: 30px 0;">
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: #34495e; margin-bottom: 10px;">Datos del Cliente</h3>
+                <p style="margin: 5px 0;"><strong>Nombre:</strong> ${datos.nombre}</p>
+                <p style="margin: 5px 0;"><strong>Email:</strong> ${datos.email}</p>
+                <p style="margin: 5px 0;"><strong>Dirección:</strong> ${datos.direccion}</p>
+            </div>
+
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
                 <thead>
-                    <tr style="background-color: #f8f9fa;">
-                        <th style="padding: 15px; text-align: left; border-bottom: 2px solid #eee;">Producto</th>
-                        <th style="padding: 15px; text-align: center; border-bottom: 2px solid #eee;">Cantidad</th>
-                        <th style="padding: 15px; text-align: right; border-bottom: 2px solid #eee;">Precio</th>
-                        <th style="padding: 15px; text-align: right; border-bottom: 2px solid #eee;">Total</th>
+                    <tr style="background: #34495e; color: #fff;">
+                        <th style="padding: 10px; text-align: left;">Producto</th>
+                        <th style="padding: 10px; text-align: center;">Cantidad</th>
+                        <th style="padding: 10px; text-align: right;">Precio</th>
+                        <th style="padding: 10px; text-align: right;">Total</th>
                     </tr>
                 </thead>
                 <tbody>
                     ${datos.productos.map(producto => `
-                        <tr>
-                            <td style="padding: 15px; border-bottom: 1px solid #eee;">${producto.titulo}</td>
-                            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee;">${producto.cantidad}</td>
-                            <td style="padding: 15px; text-align: right; border-bottom: 1px solid #eee;">€${producto.precio.toFixed(2)}</td>
-                            <td style="padding: 15px; text-align: right; border-bottom: 1px solid #eee;">€${(producto.precio * producto.cantidad).toFixed(2)}</td>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 10px;">${producto.nombre}</td>
+                            <td style="padding: 10px; text-align: center;">${producto.cantidad}</td>
+                            <td style="padding: 10px; text-align: right;">$${producto.precio}</td>
+                            <td style="padding: 10px; text-align: right;">$${producto.precio * producto.cantidad}</td>
                         </tr>
                     `).join('')}
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3" style="padding: 15px; text-align: right;"><strong>Subtotal:</strong></td>
-                        <td style="padding: 15px; text-align: right;">€${datos.subtotal.toFixed(2)}</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" style="padding: 15px; text-align: right;"><strong>IVA (21%):</strong></td>
-                        <td style="padding: 15px; text-align: right;">€${datos.iva.toFixed(2)}</td>
-                    </tr>
-                    <tr style="background-color: #f8f9fa;">
-                        <td colspan="3" style="padding: 15px; text-align: right;"><strong>Total:</strong></td>
-                        <td style="padding: 15px; text-align: right; font-weight: bold;">€${datos.total.toFixed(2)}</td>
-                    </tr>
-                </tfoot>
             </table>
 
-            <div style="background-color: #f8f9fa; padding: 25px; border-radius: 8px; margin-top: 30px;">
-                <h3 style="color: #34495e; margin-top: 0;">Información de Pago</h3>
-                <p style="color: #666; margin: 10px 0;">Método de pago: ${datos.metodoPago}</p>
-                <p style="color: #666; margin: 10px 0;">Estado: ${datos.estado}</p>
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 5px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span>Subtotal:</span>
+                    <span>$${datos.subtotal}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span>IVA (21%):</span>
+                    <span>$${(datos.subtotal * 0.21).toFixed(2)}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-weight: bold; color: #34495e;">
+                    <span>Total:</span>
+                    <span>$${(datos.subtotal * 1.21).toFixed(2)}</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; text-align: center; color: #666;">
+                <p><strong>Método de Pago:</strong> ${datos.metodoPago}</p>
+                <p style="margin-top: 20px;">¡Gracias por tu compra!</p>
             </div>
         </div>
-
-        <div style="text-align: center; padding: 20px; color: #666; font-size: 12px;">
-            <p>© ${new Date().getFullYear()} ModaStyle. Todos los derechos reservados.</p>
-            <p>Este documento es una factura electrónica válida.</p>
-        </div>
     </div>
-`;
+    `;
+}
 
 module.exports = { userTemplate, adminTemplate, facturaTemplate }; 
