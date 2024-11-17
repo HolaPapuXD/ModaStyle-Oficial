@@ -44,6 +44,10 @@ app.get('/pago.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/html/pago.html'));
 });
 
+app.get('/detalle-producto.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/html/detalle-producto.html'));
+});
+
 // Ruta para el formulario de contacto
 app.post('/api/contacto', async (req, res) => {
     console.log('Recibida petición POST a /api/contacto');
