@@ -28,6 +28,25 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 2.5rem;
     }
+
+    /* Mejora del tamaño de iconos para pantallas grandes */
+    .tecnologias i {
+        font-size: 3.5rem;
+    }
+
+    /* Ajuste de espaciado en secciones */
+    .seccion {
+        padding: 6rem 0;
+    }
+
+    /* Mejora de tamaños de texto */
+    .hero-contenido h1 {
+        font-size: 4.5rem;
+    }
+
+    .titulo-seccion {
+        font-size: 3rem;
+    }
 }
 
 /* Pantallas grandes */
@@ -156,6 +175,40 @@
         min-height: 50vh;
         padding: 100px 0 80px;
     }
+
+    .seccion.sobre-mi {
+        padding: 3rem 2rem;
+    }
+
+    .contenido-sobre-mi {
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    .texto-sobre-mi p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0 1rem;
+    }
+
+    .estadisticas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Mejora de iconos */
+    .tecnologias i {
+        font-size: 2.5rem;
+    }
+
+    .iconos-pago i {
+        font-size: 2.2rem;
+    }
+
+    /* Ajustes de espaciado */
+    .seccion {
+        padding: 4rem 0;
+    }
 }
 
 /* Tablets verticales */
@@ -190,12 +243,27 @@
     .perfil-info {
         flex-direction: column;
         text-align: center;
-        padding: 2rem 1rem;
+        padding: 1.5rem;
+        gap: 1.5rem;
     }
 
     .perfil-imagen {
-        width: 200px;
-        height: 200px;
+        margin: 0 auto;
+    }
+
+    .perfil-contenido {
+        width: 100%;
+    }
+
+    /* Ajustes para nosotros - valores */
+    .grid-valores {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .valor {
+        padding: 1.5rem;
+        max-width: 100%;
     }
 
     .perfil-contenido h1 {
@@ -221,21 +289,41 @@
 
     /* Ajustes de historia */
     .grid-historia {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
     }
 
-    .imagen-historia {
-        height: 300px;
+    .imagen-historia img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px;
     }
 
     .contenido-historia {
-        padding: 2rem 1rem;
+        text-align: center;
+        padding: 1.5rem;
     }
 
-    /* Ajustes de estadísticas */
+    .contenido-historia h2 {
+        font-size: 2rem;
+    }
+
+    .contenido-historia p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
     .estadisticas {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .stat {
+        text-align: center;
     }
 
     /* Ajustes de formularios */
@@ -268,6 +356,61 @@
     .hero-contacto {
         min-height: 40vh;
         padding: 80px 0 60px;
+    }
+
+    .seccion.sobre-mi {
+        padding: 2rem 1.5rem;
+    }
+
+    .contenido-sobre-mi {
+        padding: 1.5rem;
+    }
+
+    .texto-sobre-mi {
+        text-align: center;
+    }
+
+    .estadisticas {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .stat {
+        padding: 1.5rem;
+        margin: 0 auto;
+        max-width: 300px;
+    }
+
+    /* Mantener tamaño de iconos */
+    .stat i {
+        font-size: 2.5rem;
+    }
+
+    /* Mejora de tamaños de texto */
+    h1, .titulo-seccion {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+
+    /* Mejora de iconos en menú móvil */
+    .menu-item i {
+        font-size: 1.8rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .menu-item span {
+        font-size: 0.85rem;
+    }
+
+    /* Mejora de espaciado en tarjetas */
+    .valor {
+        padding: 1.8rem;
+    }
+
+    /* Ajuste de iconos en redes sociales */
+    .redes-sociales i {
+        font-size: 1.8rem;
     }
 }
 
@@ -340,6 +483,94 @@
         min-height: 30vh;
         padding: 60px 0 40px;
     }
+
+    /* Ajustes adicionales para portafolio - sobre mí */
+    .perfil-info {
+        padding: 1rem;
+    }
+
+    .perfil-imagen {
+        width: 180px;
+        height: 180px;
+    }
+
+    .perfil-contenido h1 {
+        font-size: 1.8rem;
+    }
+
+    .perfil-contenido .subtitulo {
+        font-size: 1rem;
+    }
+
+    /* Ajustes adicionales para nosotros - valores */
+    .valor {
+        padding: 1rem;
+    }
+
+    .valor i {
+        font-size: 2.5rem;
+    }
+
+    .valor h3 {
+        font-size: 1.2rem;
+    }
+
+    .seccion.sobre-mi {
+        padding: 1.5rem 1rem;
+    }
+
+    .contenido-sobre-mi {
+        padding: 1rem;
+    }
+
+    .texto-sobre-mi p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .stat {
+        padding: 1.25rem;
+    }
+
+    .stat h3 {
+        font-size: 1.2rem;
+    }
+
+    .stat p {
+        font-size: 0.9rem;
+    }
+
+    /* Mejora de tamaños de texto */
+    h1, .titulo-seccion {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Mejora de iconos */
+    .tecnologias i {
+        font-size: 2rem;
+    }
+
+    .valor i {
+        font-size: 2.8rem;
+    }
+
+    /* Ajustes de espaciado */
+    .seccion {
+        padding: 3rem 0;
+    }
+
+    /* Mejora de menú móvil */
+    .menu-item i {
+        font-size: 1.6rem;
+    }
+
+    .menu-item span {
+        font-size: 0.75rem;
+    }
 }
 
 /* Móviles medianos */
@@ -408,6 +639,40 @@
     .habilidad h3 {
         font-size: 1rem;
     }
+
+    /* Mejora de tamaños de texto */
+    .hero-contenido h1 {
+        font-size: 2rem;
+    }
+
+    .perfil-contenido h1 {
+        font-size: 1.6rem;
+    }
+
+    /* Ajuste de iconos */
+    .iconos-pago i {
+        font-size: 1.8rem;
+    }
+
+    .redes-sociales i {
+        font-size: 1.5rem;
+    }
+
+    /* Mejora de espaciado en elementos */
+    .valor {
+        padding: 1.5rem;
+    }
+
+    .stat {
+        padding: 1.2rem;
+    }
+
+    /* Ajuste de botones */
+    .boton-principal,
+    .boton-secundario {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
 }
 
 /* Móviles pequeños */
@@ -437,6 +702,30 @@
     /* Ajustes de menú móvil */
     .menu-item {
         padding: 0.5rem;
+    }
+
+    /* Ajuste de texto */
+    h1, .titulo-seccion {
+        font-size: 1.5rem;
+    }
+
+    /* Mejora de menú móvil */
+    .menu-item i {
+        font-size: 1.4rem;
+    }
+
+    .menu-item span {
+        font-size: 0.7rem;
+    }
+
+    /* Ajuste de iconos */
+    .tecnologias i {
+        font-size: 1.8rem;
+    }
+
+    /* Mejora de espaciado */
+    .seccion {
+        padding: 2.5rem 0;
     }
 }
 
@@ -595,5 +884,301 @@ input, select, textarea {
     .detalles-pago,
     .resumen-pedido {
         padding: 1.5rem;
+    }
+}
+
+/* Mejoras específicas para el portafolio en diferentes breakpoints */
+
+/* Pantallas extra grandes */
+@media (min-width: 1400px) {
+    /* Hero Portafolio */
+    .hero-portfolio {
+        min-height: 100vh;
+        padding-top: 6rem;
+    }
+
+    .perfil-info {
+        display: flex;
+        gap: 4rem;
+        padding: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .perfil-imagen {
+        width: 300px;
+        height: 300px;
+    }
+
+    .perfil-contenido h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .perfil-contenido .subtitulo {
+        font-size: 2rem;
+    }
+
+    /* Proyectos */
+    .grid-proyectos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .proyecto-imagen {
+        height: 250px;
+    }
+}
+
+/* Pantallas grandes */
+@media (max-width: 1200px) {
+    .perfil-info {
+        gap: 3rem;
+        padding: 2.5rem;
+    }
+
+    .perfil-imagen {
+        width: 250px;
+        height: 250px;
+    }
+
+    .perfil-contenido h1 {
+        font-size: 3rem;
+    }
+
+    /* Habilidades */
+    .grid-habilidades {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .habilidad i {
+        font-size: 2.2rem;
+    }
+}
+
+/* Tablets horizontales */
+@media (max-width: 992px) {
+    .hero-portfolio {
+        padding-top: 5rem;
+    }
+
+    .perfil-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .perfil-imagen {
+        width: 220px;
+        height: 220px;
+    }
+
+    .perfil-contenido h1 {
+        font-size: 2.2rem;
+    }
+
+    .perfil-contenido .subtitulo {
+        font-size: 1.3rem;
+    }
+
+    .tecnologias {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .tecnologias i {
+        font-size: 2.2rem;
+    }
+
+    .grid-habilidades {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .habilidad {
+        padding: 1.5rem;
+    }
+
+    /* Contacto Portfolio */
+    .grid-contacto {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Tablets verticales */
+@media (max-width: 768px) {
+    .perfil-contenido h1 {
+        font-size: 1.8rem;
+    }
+
+    .perfil-contenido .subtitulo {
+        font-size: 1.1rem;
+    }
+
+    /* Tecnologías */
+    .tecnologias {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .tecnologias i {
+        font-size: 1.8rem;
+    }
+
+    /* Proyectos */
+    .proyecto-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .proyecto-tecnologias i {
+        font-size: 1.5rem;
+    }
+
+    /* Habilidades */
+    .grid-habilidades {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .categoria-habilidad {
+        padding: 1.5rem;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 576px) {
+    .hero-portfolio {
+        padding-top: 4rem;
+    }
+
+    .perfil-imagen {
+        width: 150px;
+        height: 150px;
+    }
+
+    .perfil-contenido h1 {
+        font-size: 1.5rem;
+    }
+
+    .perfil-contenido .subtitulo {
+        font-size: 1rem;
+    }
+
+    /* Proyectos */
+    .grid-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto-imagen {
+        height: 180px;
+    }
+
+    /* Tecnologías y Habilidades */
+    .tecnologias {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+    }
+
+    .tecnologias i {
+        font-size: 1.5rem;
+    }
+
+    .habilidad i {
+        font-size: 2rem;
+    }
+
+    /* Botones */
+    .boton-proyecto {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Móviles medianos */
+@media (max-width: 480px) {
+    .perfil-info {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .perfil-imagen {
+        width: 180px;
+        height: 180px;
+    }
+
+    .perfil-contenido h1 {
+        font-size: 1.8rem;
+    }
+
+    .perfil-contenido .subtitulo {
+        font-size: 1.1rem;
+    }
+
+    /* Proyectos */
+    .proyecto-imagen {
+        height: 160px;
+    }
+
+    .proyecto-info {
+        padding: 1rem;
+    }
+
+    .proyecto-info h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Tecnologías */
+    .tecnologias i {
+        font-size: 1.5rem;
+    }
+
+    /* Formulario de contacto */
+    .campo {
+        margin-bottom: 1rem;
+    }
+
+    .campo input,
+    .campo textarea {
+        padding: 0.8rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 360px) {
+    .perfil-imagen {
+        width: 100px;
+        height: 100px;
+    }
+
+    .perfil-contenido h1 {
+        font-size: 1.3rem;
+    }
+
+    /* Tecnologías */
+    .tecnologias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tecnologias i {
+        font-size: 1.3rem;
+    }
+
+    /* Proyectos */
+    .proyecto-imagen {
+        height: 140px;
+    }
+
+    .proyecto-enlaces {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .boton-proyecto {
+        width: 100%;
+        justify-content: center;
     }
 } 
